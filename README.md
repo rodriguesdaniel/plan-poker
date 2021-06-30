@@ -1,5 +1,5 @@
-# Getting Started with Create React App
-
+# Plan Poker Project
+The idea is create a game to estimate hours of development for task developers.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
