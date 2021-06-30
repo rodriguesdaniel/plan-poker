@@ -1,0 +1,151 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #CCC;
+  color: #FFF;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.table-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.header-table {
+  display: flex;
+}
+
+.footer-table {
+  display: flex;
+}
+
+.table-cards {
+  background: #333;
+  border-radius: 10px;
+  width: 280px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: yellow;
+  width: 45px;
+  height: 60px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+
+.wrapper-votes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper-votes h4 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.wrapper-votes ul {
+  list-style: none;
+  display: flex;
+}
+
+.wrapper-votes ul li {
+  display: inline;
+  margin: 0 5px;
+  transition: all .09s linear;
+  cursor: pointer;
+}
+
+ul li:hover {
+  margin-top: -5px;
+}
+
+button {
+  display: inline;
+  background-color: black;
+  border: 0;
+  color: #FFF;
+  transition: all .09s linear;
+  cursor: pointer;
+}
+
+/* Profile hide */
+.hide {
+  display: none !important;
+}
+
+.profile-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-wrapper form {
+  max-width: 300px;
+  width: 100%;
+  height: 300px;
+  background: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.profile-wrapper button{
+  background: red;
+  display: inline-block;
+  width: 100%;
+}
+
+.avatar {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #f00;
+  color: #FFF;
+}
