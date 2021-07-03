@@ -1,18 +1,14 @@
 import React, { useState } from "react";
+import { useCookies } from "react-cookie";
 import Input from './Child';
 
 function User(props) {
 
+  const [cookies, setCookie] = useCookies(["user"]);
+  const [profile, setProfile] = useState(cookies.user === undefined ? true : false);
   const value = useState('');
-  const [profile, setProfile] = useState(true);
   const [userName, setUserName] = useState('');
   const [nameUser, setNameUser] = useState('');
-
-  function showCookies() {
-    const allcookies = document.cookie;
-    console.log(allcookies);
-    return allcookies;
-  }
 
   const onchange = (data) => {
     setNameUser(data);
@@ -23,27 +19,28 @@ function User(props) {
     if(nameUser){
       setNameUser(nameUser);
       setProfile(false);
-      showCookies();
-    }
-      else {
-      console.log('Type a name');
+      // Set cookie session user name
+      setCookie("user", nameUser, {
+        path: "/"
+      });
     }
   };
 
   const handleProfile = () => {
+    console.log('HANDLEEE');
     setUserName(nameUser);
   }
 
   return (
     <div>
-      <div className={`profile-wrapper ${profile ? "show" : "hide"}`}>
+      <div className={`profile-wrapper ${profile ? 'show' : 'hide'}`}>
         <form onSubmit={submited}>
           <Input data={value} onchange={(event) => { onchange(event) }}/>
           <button onClick={handleProfile}>Save Name</button>
         </form>
       </div>
       <div className={`avatar ${profile ? "hide" : "show"}`}>
-        <p>{userName}</p>
+        <p>{userName ? userName : cookies.user}</p>
       </div>
     </div>
   );
