@@ -43,7 +43,7 @@ body {
   height: 150px;
   display: flex;
   align-items: center;
-  color: black;
+  color: #FFF;
   justify-content: center;
 }
 
@@ -120,6 +120,10 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .profile-wrapper form {
@@ -146,6 +150,10 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  border: 1px solid #f00;
+  background: #000;
   color: #FFF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

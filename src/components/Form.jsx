@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../styles/App.css';
 
 export class Form extends Component {
   constructor(props) {
@@ -26,6 +26,7 @@ export class Form extends Component {
     //alert(`Username: ${this.state.username},`);
     event.preventDefault();
   };
+
   render() {
     const {data} = this.state;
     return (

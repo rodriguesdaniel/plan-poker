@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import '../App.css';
+import '../styles/App.css';
 
 function Votes() {
   const [disabled, setDisabled] = useState(false);
