@@ -27,7 +27,6 @@ function User(props) {
   };
 
   const handleProfile = () => {
-    console.log('HANDLEEE');
     setUserName(nameUser);
   }
 
